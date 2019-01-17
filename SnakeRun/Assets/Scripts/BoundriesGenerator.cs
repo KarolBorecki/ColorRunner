@@ -8,14 +8,17 @@ public class BoundriesGenerator : MonoBehaviour {
     public Transform relativityObject;
     public Vector2 blockPositioning;
     public int blocksPerScreen = 10;
+    public int safeBlocks = 3;
     public float blockMargin = 1;
 
     private float blockX;
     private float blockY;
+    private int blockNumber = 0;
     private List<Transform> blocks = new List<Transform>();
+    private Vector3 stageDimensions;
 
-	void Start () {
-        Vector3 stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+    void Start () {
+        stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
         blockX = -stageDimensions.x + blockPositioning.x;
         blockY = -stageDimensions.y + blockPositioning.y;
 
@@ -23,12 +26,30 @@ public class BoundriesGenerator : MonoBehaviour {
     }
 	
 	void Update () {
-		
+        if(relativityObject.position.x + stageDimensions.x - blockMargin/2 >= blocks[blocksPerScreen-safeBlocks].position.x){
+            Generate();
+        }
 	}
 
     void FirstGenerate(){
         for (int i = 0; i < blocksPerScreen; i++){
-            blocks.Add(Instantiate(boundryPrefab, new Vector3(blockX + blockMargin*i, blockY, 0),transform.rotation));
+            InstantiateBlock();
         }
+    }
+
+    void Generate(){
+        DeleteBlock();
+        InstantiateBlock();
+    }
+
+    void InstantiateBlock(){
+        blocks.Add(Instantiate(boundryPrefab, new Vector3(blockX + blockMargin * blockNumber, blockY, 0), transform.rotation));
+        blockNumber++;
+    }
+
+    void DeleteBlock(){
+        Destroy(blocks[0].gameObject);
+        blocks.Remove(blocks[0]);
+
     }
 }
