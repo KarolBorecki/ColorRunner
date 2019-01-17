@@ -16,8 +16,8 @@ public class BoundriesGenerator : MonoBehaviour {
 
 	void Start () {
         Vector3 stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        blockX = -stageDimensions.x;
-        blockY = -stageDimensions.y;
+        blockX = -stageDimensions.x + blockPositioning.x;
+        blockY = -stageDimensions.y + blockPositioning.y;
 
         FirstGenerate();
     }
