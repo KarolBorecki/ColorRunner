@@ -6,8 +6,10 @@ public class BoundriesGenerator : MonoBehaviour {
 
     public Transform boundryPrefab;
     public Transform relativityObject;
-    public Vector2 maxBlockYPositions;
+    public float firstBlockY;
+    public Vector2 maxBlockYDifference;
     public Vector2 maxBlockXPostions;
+    public Vector2 maxBlocksY;
     public Vector2 maxBlocksGrowing;
     public int blocksPerScreen = 10;
     public int safeBlocks = 3;
@@ -24,7 +26,7 @@ public class BoundriesGenerator : MonoBehaviour {
     void Start () {
         stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
         blockX = -stageDimensions.x + maxBlockXPostions.x;
-        blockY = -stageDimensions.y + maxBlockYPositions.x;
+        blockY = -stageDimensions.y + maxBlockYDifference.x;
 
         FirstGenerate();
     }
@@ -36,7 +38,7 @@ public class BoundriesGenerator : MonoBehaviour {
 	}
 
     void FirstGenerate(){
-        blocks.Add(Instantiate(boundryPrefab, new Vector3(blockX + blockMargin * blockNumber, -6.5f, 0), transform.rotation));
+        blocks.Add(Instantiate(boundryPrefab, new Vector3(blockX + blockMargin * blockNumber, firstBlockY, 0), transform.rotation));
         Debug.Log(blocks[0].position.y.ToString());
         blockNumber++;
         actuallBlocksGrowing--;
@@ -52,7 +54,7 @@ public class BoundriesGenerator : MonoBehaviour {
     }
 
     void InstantiateBlock(){
-        blocks.Add(Instantiate(boundryPrefab, new Vector3(blockX + blockMargin * blockNumber, GetRandomY(maxBlockYPositions), 0), transform.rotation));
+        blocks.Add(Instantiate(boundryPrefab, new Vector3(blockX + blockMargin * blockNumber, GetRandomY(maxBlockYDifference), 0), transform.rotation));
         blockNumber++;
         actuallBlocksGrowing--;
     }
@@ -72,9 +74,10 @@ public class BoundriesGenerator : MonoBehaviour {
     }
 
     float GetRandomY(Vector2 range){
-        return isGrowing ? GetRandomFloat(new Vector2(blocks[blocks.Count-1].position.y, 
-                                                      blocks[blocks.Count - 1].position.y + range.y)) 
-                : GetRandomFloat(new Vector2(blocks[blocks.Count - 1].position.y-range.x,
+        float y = isGrowing ? GetRandomFloat(new Vector2(blocks[blocks.Count - 1].position.y,
+                                                      blocks[blocks.Count - 1].position.y + range.y))
+                : GetRandomFloat(new Vector2(blocks[blocks.Count - 1].position.y - range.x,
                                                       blocks[blocks.Count - 1].position.y));
+        return (y < maxBlocksY.x || y > maxBlocksY.y) ? blocks[blocks.Count - 1].position.y : y;
     }
 }
