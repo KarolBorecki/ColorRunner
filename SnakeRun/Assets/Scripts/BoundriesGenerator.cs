@@ -8,12 +8,15 @@ public class BoundriesGenerator : MonoBehaviour {
     public Transform relativityObject;
     public Vector2 maxBlockYPositions;
     public Vector2 maxBlockXPostions;
+    public Vector2 maxBlocksGrowing;
     public int blocksPerScreen = 10;
     public int safeBlocks = 3;
     public float blockMargin = 1;
 
     private float blockX;
     private float blockY;
+    private int actuallBlocksGrowing = 0;
+    public bool isGrowing = true;
     private int blockNumber = 0;
     private List<Transform> blocks = new List<Transform>();
     private Vector3 stageDimensions;
@@ -33,19 +36,25 @@ public class BoundriesGenerator : MonoBehaviour {
 	}
 
     void FirstGenerate(){
-        for (int i = 0; i < blocksPerScreen; i++){
+        blocks.Add(Instantiate(boundryPrefab, new Vector3(blockX + blockMargin * blockNumber, -6.5f, 0), transform.rotation));
+        Debug.Log(blocks[0].position.y.ToString());
+        blockNumber++;
+        actuallBlocksGrowing--;
+        for (int i = 1; i < blocksPerScreen; i++){
             InstantiateBlock();
         }
     }
 
     void Generate(){
+        if (actuallBlocksGrowing <= 0) ChangeGrowing();
         DeleteBlock();
         InstantiateBlock();
     }
 
     void InstantiateBlock(){
-        blocks.Add(Instantiate(boundryPrefab, new Vector3(blockX + blockMargin * blockNumber, GetRandomY(), 0), transform.rotation));
+        blocks.Add(Instantiate(boundryPrefab, new Vector3(blockX + blockMargin * blockNumber, GetRandomY(maxBlockYPositions), 0), transform.rotation));
         blockNumber++;
+        actuallBlocksGrowing--;
     }
 
     void DeleteBlock(){
@@ -53,7 +62,19 @@ public class BoundriesGenerator : MonoBehaviour {
         blocks.Remove(blocks[0]);
     }
 
-    float GetRandomY(){
-        return Random.Range(maxBlockYPositions.x, maxBlockYPositions.y);
+    void ChangeGrowing(){
+        isGrowing = !isGrowing;
+        actuallBlocksGrowing = (int)GetRandomFloat(maxBlocksGrowing);
+    }
+
+    float GetRandomFloat(Vector2 range){
+        return Random.Range(range.x, range.y);
+    }
+
+    float GetRandomY(Vector2 range){
+        return isGrowing ? GetRandomFloat(new Vector2(blocks[blocks.Count-1].position.y, 
+                                                      blocks[blocks.Count - 1].position.y + range.y)) 
+                : GetRandomFloat(new Vector2(blocks[blocks.Count - 1].position.y-range.x,
+                                                      blocks[blocks.Count - 1].position.y));
     }
 }
