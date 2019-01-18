@@ -6,7 +6,8 @@ public class BoundriesGenerator : MonoBehaviour {
 
     public Transform boundryPrefab;
     public Transform relativityObject;
-    public Vector2 blockPositioning;
+    public Vector2 maxBlockYPositions;
+    public Vector2 maxBlockXPostions;
     public int blocksPerScreen = 10;
     public int safeBlocks = 3;
     public float blockMargin = 1;
@@ -19,8 +20,8 @@ public class BoundriesGenerator : MonoBehaviour {
 
     void Start () {
         stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        blockX = -stageDimensions.x + blockPositioning.x;
-        blockY = -stageDimensions.y + blockPositioning.y;
+        blockX = -stageDimensions.x + maxBlockXPostions.x;
+        blockY = -stageDimensions.y + maxBlockYPositions.x;
 
         FirstGenerate();
     }
@@ -43,13 +44,16 @@ public class BoundriesGenerator : MonoBehaviour {
     }
 
     void InstantiateBlock(){
-        blocks.Add(Instantiate(boundryPrefab, new Vector3(blockX + blockMargin * blockNumber, blockY, 0), transform.rotation));
+        blocks.Add(Instantiate(boundryPrefab, new Vector3(blockX + blockMargin * blockNumber, GetRandomY(), 0), transform.rotation));
         blockNumber++;
     }
 
     void DeleteBlock(){
         Destroy(blocks[0].gameObject);
         blocks.Remove(blocks[0]);
+    }
 
+    float GetRandomY(){
+        return Random.Range(maxBlockYPositions.x, maxBlockYPositions.y);
     }
 }

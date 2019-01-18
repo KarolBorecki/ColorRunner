@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Block.cs" />
     <Compile Include="Assets\Scripts\BoundriesGenerator.cs" />
+    <Compile Include="Assets\Scripts\tests\CameraXWalk.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/karolborecki/Desktop/SnakeRun/SnakeRun/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

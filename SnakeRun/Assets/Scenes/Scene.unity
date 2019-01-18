@@ -220,8 +220,10 @@ MonoBehaviour:
   boundryPrefab: {fileID: 4185863897482174, guid: a28690c3c6b824addbc1a5bb8cd09fe6,
     type: 2}
   relativityObject: {fileID: 519420032}
-  blockPositioning: {x: 0, y: 0}
-  blocksPerScreen: 10
+  maxBlockYPositions: {x: -4, y: -2}
+  firstBlockX: -2
+  blocksPerScreen: 20
+  safeBlocks: 10
   blockMargin: 0.6143
 --- !u!4 &886747753
 Transform:
