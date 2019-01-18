@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour {
 
-	// Use this for initialization
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		
-	}
+        Vector3 mouse = Input.mousePosition;
+        mouse = Camera.main.ScreenToWorldPoint(mouse);
+
+        transform.position = new Vector3(mouse.x, mouse.y, transform.position.y);
+
+    }
 }

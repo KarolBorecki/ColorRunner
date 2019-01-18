@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{9338ED42-A7F3-9F0F-CAF1-1D8E3274851B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/tests/CameraXWalk.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Ball.cs">
     <Files>
       <File FileName="Assets/Scripts/Block.cs" Line="19" Column="116" />
-      <File FileName="Assets/Scripts/BoundriesGenerator.cs" Line="47" Column="106" />
-      <File FileName="Assets/Scripts/tests/CameraXWalk.cs" Line="7" Column="29" />
+      <File FileName="Assets/Scripts/BoundriesGenerator.cs" Line="28" Column="50" />
+      <File FileName="Assets/Scripts/tests/CameraXWalk.cs" Line="14" Column="66" />
+      <File FileName="Assets/Scripts/Ball.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
