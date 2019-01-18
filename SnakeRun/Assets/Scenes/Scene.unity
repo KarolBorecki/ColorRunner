@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -137,6 +138,18 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6f7e6a70111416cacc505b29eb5592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -200,7 +213,7 @@ GameObject:
   - component: {fileID: 886747753}
   - component: {fileID: 886747752}
   m_Layer: 0
-  m_Name: BoundriesGenerator
+  m_Name: Boundries Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,14 +230,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8454aac591993438981c9ca09e0a37ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boundryPrefab: {fileID: 4185863897482174, guid: a28690c3c6b824addbc1a5bb8cd09fe6,
+  boundryPrefab: {fileID: 4514614605128772, guid: dfa9aa57cc3974ce3a16c21ef22e0105,
     type: 2}
   relativityObject: {fileID: 519420032}
-  maxBlockYPositions: {x: -4, y: -2}
+  firstBlockY: -2
   firstBlockX: -2
+  maxBlockYDifference: {x: 0.3, y: 0.3}
+  maxBlocksY: {x: -2.5, y: 1.5}
+  maxBlocksGrowing: {x: 10, y: 15}
   blocksPerScreen: 20
   safeBlocks: 10
-  blockMargin: 0.6143
+  blockMargin: 0.64
+  isGrowing: 1
 --- !u!4 &886747753
 Transform:
   m_ObjectHideFlags: 0

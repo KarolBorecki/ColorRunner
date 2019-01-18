@@ -7,8 +7,8 @@ public class BoundriesGenerator : MonoBehaviour {
     public Transform boundryPrefab;
     public Transform relativityObject;
     public float firstBlockY;
+    public float firstBlockX;
     public Vector2 maxBlockYDifference;
-    public Vector2 maxBlockXPostions;
     public Vector2 maxBlocksY;
     public Vector2 maxBlocksGrowing;
     public int blocksPerScreen = 10;
@@ -25,7 +25,7 @@ public class BoundriesGenerator : MonoBehaviour {
 
     void Start () {
         stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        blockX = -stageDimensions.x + maxBlockXPostions.x;
+        blockX = -stageDimensions.x + firstBlockX;
         blockY = -stageDimensions.y + maxBlockYDifference.x;
 
         FirstGenerate();
@@ -39,7 +39,6 @@ public class BoundriesGenerator : MonoBehaviour {
 
     void FirstGenerate(){
         blocks.Add(Instantiate(boundryPrefab, new Vector3(blockX + blockMargin * blockNumber, firstBlockY, 0), transform.rotation));
-        Debug.Log(blocks[0].position.y.ToString());
         blockNumber++;
         actuallBlocksGrowing--;
         for (int i = 1; i < blocksPerScreen; i++){
