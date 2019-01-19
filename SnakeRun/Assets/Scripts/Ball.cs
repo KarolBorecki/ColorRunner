@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour {
 
+    public int lives = 1;
+
 	void Start () {
 		
 	}
@@ -14,5 +16,14 @@ public class Ball : MonoBehaviour {
 
         transform.position = new Vector3(mouse.x, mouse.y, transform.position.y);
 
+    }
+
+    public void GetDamage(int amount){
+        lives -= amount;
+        if (lives <= 0) Dead();
+    }
+
+    void Dead(){
+        Destroy(gameObject);
     }
 }

@@ -36,6 +36,7 @@ GameObject:
   - component: {fileID: 4536914252410162}
   - component: {fileID: 212853366654654974}
   - component: {fileID: 61973044897404406}
+  - component: {fileID: 114233128766453824}
   m_Layer: 0
   m_Name: up
   m_TagString: Untagged
@@ -53,6 +54,7 @@ GameObject:
   - component: {fileID: 4177252652383976}
   - component: {fileID: 212789022140124246}
   - component: {fileID: 61509978324417384}
+  - component: {fileID: 114799677366784200}
   m_Layer: 0
   m_Name: down
   m_TagString: Untagged
@@ -151,6 +153,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20.48, y: 20.48}
   m_EdgeRadius: 0
+--- !u!114 &114233128766453824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1182520607183048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe84716a709d4426c9334c0c977cbbf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!114 &114799677366784200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1560352550148376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe84716a709d4426c9334c0c977cbbf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!212 &212789022140124246
 SpriteRenderer:
   m_ObjectHideFlags: 1
