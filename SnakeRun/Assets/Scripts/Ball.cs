@@ -6,7 +6,7 @@ public class Ball : MonoBehaviour {
 
     public int lives = 1;
 
-	void Start () {
+    void Start () {
 		
 	}
 	
@@ -14,8 +14,7 @@ public class Ball : MonoBehaviour {
         Vector3 mouse = Input.mousePosition;
         mouse = Camera.main.ScreenToWorldPoint(mouse);
 
-        transform.position = new Vector3(mouse.x, mouse.y, transform.position.y);
-
+        transform.position = new Vector3(mouse.x, mouse.y, 0.0f);
     }
 
     public void GetDamage(int amount){

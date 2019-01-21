@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\DamageArena.cs" />
     <Compile Include="Assets\Scripts\PointsCounter.cs" />
     <Compile Include="Assets\Scripts\tests\CameraXWalk.cs" />
+    <Compile Include="Assets\Scripts\tests\Follow.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/karolborecki/Desktop/SnakeRun/SnakeRun/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
