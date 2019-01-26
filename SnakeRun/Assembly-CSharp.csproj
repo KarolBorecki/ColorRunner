@@ -64,8 +64,12 @@
     <Compile Include="Assets\Scripts\Ball.cs" />
     <Compile Include="Assets\Scripts\Block.cs" />
     <Compile Include="Assets\Scripts\BoundriesGenerator.cs" />
+    <Compile Include="Assets\Scripts\ColorPicker.cs" />
     <Compile Include="Assets\Scripts\DamageArena.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\PointsCounter.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Stopper.cs" />
     <Compile Include="Assets\Scripts\tests\CameraXWalk.cs" />
     <Compile Include="Assets\Scripts\tests\Follow.cs" />
     <Reference Include="UnityEditor.StandardEvents">

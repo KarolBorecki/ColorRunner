@@ -6,35 +6,29 @@ public class Ball : MonoBehaviour {
 
     public int lives = 1;
 
-    public float shootDelay = .1f;
-    private float actuallTime = 0f;
+    public float jumpForce = 5f;
 
-    public float shootForce = 1000f;
+    private Rigidbody2D rgb;
+
+    public float shootForce = 1200f;
     public Rigidbody2D shoot;
     public Transform shootTransform;
 
     void Start () {
-		
+        rgb = GetComponent<Rigidbody2D>();
 	}
 	
-	void Update () {
-        Vector3 mouse = Input.mousePosition;
-        mouse = Camera.main.ScreenToWorldPoint(mouse);
-
-        transform.position = new Vector3(mouse.x, mouse.y, transform.position.y);
-
-        if (Input.GetButton("Fire1")) Shoot();
+    void Update () {
+        if(Input.GetButtonDown("Fire1")){
+            rgb.velocity = Vector2.up * jumpForce;
+            Shoot();
+        }
     }
 
     void Shoot()
     {
-        actuallTime += Time.deltaTime;
-        if (actuallTime >= shootDelay)
-        {
-            Rigidbody2D shootball = Instantiate(shoot, shootTransform.position, transform.rotation) as Rigidbody2D;
-            shootball.AddForce(Vector2.right * shootForce);
-            actuallTime = 0f;
-        }
+        Rigidbody2D shootball = Instantiate(shoot, shootTransform.position, transform.rotation) as Rigidbody2D;
+        shootball.AddForce(Vector2.right * shootForce);
     }
 
     public void GetDamage(int amount){
