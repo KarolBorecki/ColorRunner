@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{9338ED42-A7F3-9F0F-CAF1-1D8E3274851B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Stopper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Spawner.cs">
     <Files>
       <File FileName="Assets/Scripts/Block.cs" Line="19" Column="116" />
       <File FileName="Assets/Scripts/BoundriesGenerator.cs" Line="8" Column="38" />
       <File FileName="Assets/Scripts/tests/CameraXWalk.cs" Line="17" Column="1" />
       <File FileName="Assets/Scripts/Ball.cs" Line="31" Column="41" />
       <File FileName="Assets/Scripts/DamageArena.cs" Line="19" Column="39" />
-      <File FileName="Assets/Scripts/PointsCounter.cs" Line="23" Column="27" />
+      <File FileName="Assets/Scripts/PointsCounter.cs" Line="5" Column="1" />
       <File FileName="Assets/Scripts/ColorPicker.cs" Line="8" Column="73" />
       <File FileName="Assets/Scripts/Spawner.cs" Line="18" Column="3" />
       <File FileName="Assets/Scripts/Enemy.cs" Line="34" Column="25" />
-      <File FileName="Assets/Scripts/Stopper.cs" Line="9" Column="12" />
+      <File FileName="Assets/Scripts/Stopper.cs" Line="9" Column="80" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

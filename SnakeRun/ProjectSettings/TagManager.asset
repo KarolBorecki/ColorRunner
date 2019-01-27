@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ball
+  - shoot
+  - boundry
   layers:
   - Default
   - TransparentFX
