@@ -1,7 +1,11 @@
 ﻿<Properties StartupConfiguration="{17076625-F697-C04A-7290-6381C43781EF}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ColorsHandler.cs">
     <Files>
       <File FileName="Assets/Scripts/Enemy.cs" Line="34" Column="1" />
+      <File FileName="Assets/Scripts/Ball.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BallColors.cs" Line="10" Column="3" />
+      <File FileName="Assets/Scripts/Barrier.cs" Line="10" Column="3" />
+      <File FileName="Assets/Scripts/ColorsHandler.cs" Line="7" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

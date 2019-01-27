@@ -62,9 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Ball.cs" />
+    <Compile Include="Assets\Scripts\BallColors.cs" />
+    <Compile Include="Assets\Scripts\Barrier.cs" />
     <Compile Include="Assets\Scripts\Block.cs" />
     <Compile Include="Assets\Scripts\BoundriesGenerator.cs" />
     <Compile Include="Assets\Scripts\ColorPicker.cs" />
+    <Compile Include="Assets\Scripts\ColorsHandler.cs" />
     <Compile Include="Assets\Scripts\DamageArena.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\PointsCounter.cs" />

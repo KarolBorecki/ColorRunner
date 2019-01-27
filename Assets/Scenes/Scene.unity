@@ -206,48 +206,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 32917066}
   m_CullTransparentMesh: 0
---- !u!1001 &339604482
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4654925550317530, guid: 36ac88d4bd75d4849b6a4c85c203245e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4654925550317530, guid: 36ac88d4bd75d4849b6a4c85c203245e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4654925550317530, guid: 36ac88d4bd75d4849b6a4c85c203245e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4654925550317530, guid: 36ac88d4bd75d4849b6a4c85c203245e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4654925550317530, guid: 36ac88d4bd75d4849b6a4c85c203245e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4654925550317530, guid: 36ac88d4bd75d4849b6a4c85c203245e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4654925550317530, guid: 36ac88d4bd75d4849b6a4c85c203245e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4654925550317530, guid: 36ac88d4bd75d4849b6a4c85c203245e, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 36ac88d4bd75d4849b6a4c85c203245e, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,9 +326,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpawnTime: {x: 1, y: 4}
   enemy: {fileID: 114243380733469422, guid: 8558a5180c2894f808012f96048bac62, type: 2}
-  enemyYWalk: {x: 1, y: 5}
+  enemyY: {x: -1, y: 4}
+  enemyYWalk: {x: 2, y: 5}
   enemyYWalkSpeed: {x: 0.7, y: 1.7}
-  enemyXWalkSpeed: {x: 0.5, y: 2.5}
+  enemyXWalkSpeed: {x: 1.5, y: 3}
 --- !u!1 &886747751
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +380,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &995784268
 GameObject:
@@ -783,7 +742,7 @@ Transform:
   - {fileID: 519420032}
   - {fileID: 556250884}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1786214491
 MonoBehaviour:
