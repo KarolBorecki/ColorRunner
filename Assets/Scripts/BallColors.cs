@@ -7,8 +7,7 @@ public class BallColors : MonoBehaviour {
     public int actuallColor = 0;
 
 	void Start () {
-        SetColor();
-
+        ChangeColor();
     }
 	
 	void Update () {

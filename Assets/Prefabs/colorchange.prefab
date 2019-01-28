@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212297608336536680}
   - component: {fileID: 58367853768330970}
   - component: {fileID: 114026639379995284}
+  - component: {fileID: 114642612404827340}
   m_Layer: 0
   m_Name: colorchange
   m_TagString: colorchange
@@ -69,6 +70,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 4
+--- !u!114 &114642612404827340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1227102046094024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b66d8dab3f240b4a373256b33d69e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.4
+  range: 1
 --- !u!212 &212297608336536680
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -18,7 +18,7 @@ public class ColorsHandler : MonoBehaviour {
         int i = actuall;
         while (i == actuall)
         {
-            i = Random.Range(0, colors.Count-1);
+            i = Random.Range(0, colors.Count);
         } 
         return i;
     }

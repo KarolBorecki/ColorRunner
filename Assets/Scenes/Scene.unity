@@ -393,6 +393,36 @@ MonoBehaviour:
   enemyYWalk: {x: 2, y: 5}
   enemyYWalkSpeed: {x: 0.7, y: 1.7}
   enemyXWalkSpeed: {x: 1.5, y: 3}
+--- !u!1 &788452471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1639696702155586, guid: 9d55fa4b04f3d45a39213c3f803ff565,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 788452472}
+  m_Layer: 0
+  m_Name: barrel2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &788452472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4617140290740128, guid: 9d55fa4b04f3d45a39213c3f803ff565,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 788452471}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.4, y: -7.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1048609148}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &886747751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,6 +1150,11 @@ MonoBehaviour:
   barrierSpawnTime: {x: 4, y: 12}
   barrier: {fileID: 4257581399884906, guid: a7ed3fd97019b4454a42267798f2fcad, type: 2}
   barrierY: {x: -0.84, y: 0.48}
+--- !u!4 &2002913295 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4617140290740128, guid: 9d55fa4b04f3d45a39213c3f803ff565,
+    type: 2}
+  m_PrefabInternal: {fileID: 2030264659}
 --- !u!1001 &2030264659
 Prefab:
   m_ObjectHideFlags: 0
@@ -1129,7 +1164,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4004829427123790, guid: 9d55fa4b04f3d45a39213c3f803ff565, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 4004829427123790, guid: 9d55fa4b04f3d45a39213c3f803ff565, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1172,7 +1207,7 @@ Prefab:
     - target: {fileID: 114290277736359686, guid: 9d55fa4b04f3d45a39213c3f803ff565,
         type: 2}
       propertyPath: lives
-      value: 1
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114290277736359686, guid: 9d55fa4b04f3d45a39213c3f803ff565,
         type: 2}
@@ -1204,6 +1239,21 @@ Prefab:
       propertyPath: m_Color.b
       value: 0.039215688
       objectReference: {fileID: 0}
+    - target: {fileID: 114290277736359686, guid: 9d55fa4b04f3d45a39213c3f803ff565,
+        type: 2}
+      propertyPath: jumpForce
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114290277736359686, guid: 9d55fa4b04f3d45a39213c3f803ff565,
+        type: 2}
+      propertyPath: barrel2
+      value: 
+      objectReference: {fileID: 788452472}
+    - target: {fileID: 114290277736359686, guid: 9d55fa4b04f3d45a39213c3f803ff565,
+        type: 2}
+      propertyPath: barrel
+      value: 
+      objectReference: {fileID: 2002913295}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d55fa4b04f3d45a39213c3f803ff565, type: 2}
   m_IsPrefabAsset: 0
