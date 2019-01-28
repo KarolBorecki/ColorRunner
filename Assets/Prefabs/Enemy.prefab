@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114848743557938478}
   - component: {fileID: 114748349288491076}
   - component: {fileID: 114243380733469422}
+  - component: {fileID: 114562883060755820}
   - component: {fileID: 50955636773721316}
   m_Layer: 0
   m_Name: Enemy
@@ -155,6 +156,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   range: 8
+--- !u!114 &114562883060755820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1024161507816146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef15a650ddb654e29b69a3d8d8cd2a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 5
 --- !u!114 &114748349288491076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,8 +224,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -746325653
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3e6c4b94e99764cf98b8628d138e0796, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

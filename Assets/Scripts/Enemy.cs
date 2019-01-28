@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour {
 
     void Start(){
         actuallrange = range * dir / 2;
+
     }
 
     void Update()

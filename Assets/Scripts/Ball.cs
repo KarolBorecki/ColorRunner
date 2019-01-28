@@ -28,6 +28,7 @@ public class Ball : MonoBehaviour {
     void Shoot()
     {
         Rigidbody2D shootball = Instantiate(shoot, shootTransform.position, transform.rotation) as Rigidbody2D;
+        shootball.GetComponent<SpriteRenderer>().color = GetComponent<SpriteRenderer>().color;
         shootball.AddForce(Vector2.right * shootForce);
     }
 
@@ -37,6 +38,8 @@ public class Ball : MonoBehaviour {
     }
 
     void Dead(){
-        Destroy(gameObject);
+        Time.timeScale = 0f;
+        lives = 1;
+        FindObjectOfType<TestPlayBtn>().Again();
     }
 }

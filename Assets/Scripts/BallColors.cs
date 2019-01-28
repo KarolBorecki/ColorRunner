@@ -8,6 +8,7 @@ public class BallColors : MonoBehaviour {
 
 	void Start () {
         SetColor();
+
     }
 	
 	void Update () {
@@ -15,9 +16,8 @@ public class BallColors : MonoBehaviour {
 	}
 
     void ChangeColor(){
-        actuallColor = Random.Range(0, 3);
+        actuallColor = FindObjectOfType<ColorsHandler>().GetRandomColor(actuallColor);
         SetColor();
-        Debug.Log("FA");
     }
 
     void SetColor(){
@@ -26,8 +26,10 @@ public class BallColors : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if(collision.gameObject.tag == "colorchange"){
             ChangeColor();
+            Destroy(collision.gameObject);
         }
     }
 }

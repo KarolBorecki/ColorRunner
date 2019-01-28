@@ -7,6 +7,9 @@ TagManager:
   - ball
   - shoot
   - boundry
+  - colorshandler
+  - colorchange
+  - barrier
   layers:
   - Default
   - TransparentFX
@@ -43,4 +46,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1981766117
+    locked: 0
+  - name: Ball
+    uniqueID: 29064573
+    locked: 0
+  - name: Shoot
+    uniqueID: 4209043285
+    locked: 0
+  - name: Enemy
+    uniqueID: 3548641643
+    locked: 0
+  - name: Boundry
+    uniqueID: 3748442001
     locked: 0
