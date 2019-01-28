@@ -76,7 +76,6 @@
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\Stopper.cs" />
     <Compile Include="Assets\Scripts\tests\CameraXWalk.cs" />
-    <Compile Include="Assets\Scripts\tests\Follow.cs" />
     <Compile Include="Assets\Scripts\tests\TestPlayBtn.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/karolborecki/Desktop/ColorRunner/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
