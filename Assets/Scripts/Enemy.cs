@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour {
     public float speed = 5f;
     public float range = 10;
 
+    public Transform DeadPrefab;
+
     private float actuallrange;
     private int dir = -1;
 
@@ -33,8 +35,13 @@ public class Enemy : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         changeDirection();
-        if (collision.gameObject.tag == "shoot") Destroy(gameObject);
+        if (collision.gameObject.tag == "shoot") Die();
            
+    }
+
+    void Die(){
+        Instantiate(DeadPrefab, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 
 }

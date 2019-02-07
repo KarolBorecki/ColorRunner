@@ -53,7 +53,7 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1024161507816146}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   range: 8
+  DeadPrefab: {fileID: 4767075416608490, guid: 43ad40b038eba4b90ac013cb1ec75a83, type: 2}
 --- !u!114 &114562883060755820
 MonoBehaviour:
   m_ObjectHideFlags: 1

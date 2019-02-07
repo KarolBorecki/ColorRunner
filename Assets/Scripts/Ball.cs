@@ -57,10 +57,10 @@ public class Ball : MonoBehaviour {
     public void GetDamage(int amount){
         if (actuallSafeTime <= 0)
         {
+            Camera.main.GetComponent<Animator>().SetTrigger("shake");
             lifes -= amount;
             lifesText.text = lifes.ToString();
             if (lifes <= 0) Dead();
-            else Camera.main.GetComponent<Animator>().SetTrigger("shake");
 
             actuallSafeTime = safeTime;
         } 
@@ -73,7 +73,5 @@ public class Ball : MonoBehaviour {
 
     void Dead(){
         Time.timeScale = 0f;
-        lifes = 1;
-        FindObjectOfType<TestPlayBtn>().Again();
     }
 }

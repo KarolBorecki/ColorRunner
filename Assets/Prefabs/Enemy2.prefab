@@ -106,6 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   range: 8
+  DeadPrefab: {fileID: 4767075416608490, guid: 43ad40b038eba4b90ac013cb1ec75a83, type: 2}
 --- !u!114 &114540611311206670
 MonoBehaviour:
   m_ObjectHideFlags: 1

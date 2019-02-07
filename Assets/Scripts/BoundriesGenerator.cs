@@ -16,7 +16,6 @@ public class BoundriesGenerator : MonoBehaviour {
     public float blockMargin = 1;
 
     private float blockX;
-    private float blockY;
     private int actuallBlocksGrowing = 0;
     public bool isGrowing = true;
     private int blockNumber = 0;
@@ -26,7 +25,6 @@ public class BoundriesGenerator : MonoBehaviour {
     void Start () {
         stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
         blockX = -stageDimensions.x + firstBlockX;
-        blockY = -stageDimensions.y + maxBlockYDifference.x;
 
         FirstGenerate();
     }
