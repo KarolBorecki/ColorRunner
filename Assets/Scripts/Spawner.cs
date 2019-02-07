@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour {
 
     public Vector2 enemySpawnTime;
-    public Enemy enemy;
+    public List<Enemy> enemies;
 
     public Vector2 enemyY;
     public Vector2 enemyYWalk;
@@ -21,7 +21,7 @@ public class Spawner : MonoBehaviour {
 	void Update () {
         time -= Time.deltaTime;
         if(time<=0){
-            Enemy e = Instantiate(enemy, new Vector2(transform.position.x, Random.Range(enemyY.x, enemyY.y)), transform.rotation);
+            Enemy e = Instantiate(enemies[Random.Range(0, enemies.Count)], new Vector2(transform.position.x, Random.Range(enemyY.x, enemyY.y)), transform.rotation);
             e.GetComponent<CameraXWalk>().speed = Random.Range(enemyXWalkSpeed.x, enemyXWalkSpeed.y);
             e.range = Random.Range(enemyYWalk.x, enemyYWalk.y);
             e.speed = Random.Range(enemyYWalkSpeed.x, enemyYWalkSpeed.y);

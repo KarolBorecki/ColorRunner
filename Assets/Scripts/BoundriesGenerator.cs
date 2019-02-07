@@ -42,6 +42,7 @@ public class BoundriesGenerator : MonoBehaviour {
         blockNumber++;
         actuallBlocksGrowing--;
         for (int i = 1; i < blocksPerScreen; i++){
+            if (actuallBlocksGrowing <= 0) ChangeGrowing();
             InstantiateBlock();
         }
     }

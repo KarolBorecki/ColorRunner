@@ -10,6 +10,7 @@ TagManager:
   - colorshandler
   - colorchange
   - barrier
+  - life
   layers:
   - Default
   - TransparentFX

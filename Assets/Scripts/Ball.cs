@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour {
 
-    public int lives = 1;
+    public int lifes = 1;
+    public float safeTime = 0.5f;
+    private float actuallSafeTime;
 
     public float jumpForce = 5f;
 
@@ -16,11 +19,16 @@ public class Ball : MonoBehaviour {
     public Transform barrel; 
     public Transform barrel2;
 
+    public Text lifesText; 
+
     void Start () {
         rgb = GetComponent<Rigidbody2D>();
+        lifesText.text = lifes.ToString();
+        actuallSafeTime = safeTime;
 	}
 	
     void Update () {
+        if (actuallSafeTime > 0) actuallSafeTime -= Time.deltaTime;
         if(Input.GetButtonDown("Fire1")){
             float f = (GetComponent<BallColors>().actuallColor == 2) ? 1.7f : 1f;
             rgb.velocity = Vector2.up * jumpForce * f;
@@ -47,13 +55,25 @@ public class Ball : MonoBehaviour {
     }
 
     public void GetDamage(int amount){
-        lives -= amount;
-        if (lives <= 0) Dead();
+        if (actuallSafeTime <= 0)
+        {
+            lifes -= amount;
+            lifesText.text = lifes.ToString();
+            if (lifes <= 0) Dead();
+            else Camera.main.GetComponent<Animator>().SetTrigger("shake");
+
+            actuallSafeTime = safeTime;
+        } 
+    }
+
+    public void AddLife(int amount){
+        lifes += amount;
+        lifesText.text = lifes.ToString();
     }
 
     void Dead(){
         Time.timeScale = 0f;
-        lives = 1;
+        lifes = 1;
         FindObjectOfType<TestPlayBtn>().Again();
     }
 }

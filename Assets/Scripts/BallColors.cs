@@ -25,10 +25,21 @@ public class BallColors : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        if(collision.gameObject.tag == "colorchange"){
+        if (collision.gameObject.tag == "colorchange")
+        {
             ChangeColor();
             Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "life")
+        {
+            GetComponent<Ball>().AddLife(1);
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "barrier"){
+            if(collision.gameObject.GetComponent<Barrier>().actuallColor != actuallColor){
+                GetComponent<Ball>().GetDamage(1);
+            }
         }
     }
 }
