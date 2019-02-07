@@ -40,7 +40,8 @@ public class Enemy : MonoBehaviour {
     }
 
     void Die(){
-        Instantiate(DeadPrefab, transform.position, transform.rotation);
+        Transform deadPrefab = Instantiate(DeadPrefab, transform.position, transform.rotation);
+        Destroy(deadPrefab.gameObject, 5);
         Destroy(gameObject);
     }
 

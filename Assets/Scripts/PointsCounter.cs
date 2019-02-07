@@ -27,6 +27,10 @@ public class PointsCounter : MonoBehaviour {
 
     void setPoints(int amount){
         points = amount;
+        if (amount % 100 == 0)
+        {
+            GetComponent<CameraXWalk>().SpeedUp();
+        }
         pointsText.text = points.ToString();
     }
 
