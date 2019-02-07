@@ -75,5 +75,12 @@ public class Ball : MonoBehaviour {
     void Dead(){
         deadBtn.gameObject.SetActive(true);
         Time.timeScale = 0f;
+
+        int points = FindObjectOfType<PointsCounter>().points;
+        if (points > PlayerPrefs.GetInt("record"))
+        {
+            PlayerPrefs.SetInt("record", points);
+            PlayerPrefs.Save();
+        }
     }
 }

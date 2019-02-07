@@ -1781,6 +1781,7 @@ GameObject:
   - component: {fileID: 1786214490}
   - component: {fileID: 1786214489}
   - component: {fileID: 1786214491}
+  - component: {fileID: 1786214492}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -1799,9 +1800,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6f7e6a70111416cacc505b29eb5592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  speedingUp: 1.3
-  speedingReduction: 0.96
+  speed: 4.2
+  speedingUp: 0.25
+  speedingReduction: 0.98
 --- !u!4 &1786214490
 Transform:
   m_ObjectHideFlags: 0
@@ -1838,6 +1839,17 @@ MonoBehaviour:
   pointsText: {fileID: 995784270}
   scores: 0
   pointsMultiplier: 5
+--- !u!114 &1786214492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1786214488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1cc90f80d374eb5baedae8ac33cb69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1822716694
 GameObject:
   m_ObjectHideFlags: 0
