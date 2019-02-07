@@ -19,8 +19,9 @@ public class Ball : MonoBehaviour {
     public Transform barrel; 
     public Transform barrel2;
 
-    public Text lifesText; 
+    public Text lifesText;
 
+    public TestPlayBtn deadBtn;
     void Start () {
         rgb = GetComponent<Rigidbody2D>();
         lifesText.text = lifes.ToString();
@@ -72,6 +73,7 @@ public class Ball : MonoBehaviour {
     }
 
     void Dead(){
+        deadBtn.gameObject.SetActive(true);
         Time.timeScale = 0f;
     }
 }
