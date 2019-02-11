@@ -41,9 +41,10 @@ public class Ball : MonoBehaviour {
     {
         int c = GetComponent<BallColors>().actuallColor;
         float f = (c == 0) ? 1.4f : 1f;
+        f = (c == 1) ? 0.85f : f;
         Rigidbody2D shootball = Instantiate(shoot, barrel.position, transform.rotation) as Rigidbody2D;
 
-        if (c == 3) shootball.transform.localScale += new Vector3(0.01F, 0.01f, 0);
+        if (c == 3) shootball.transform.localScale += new Vector3(0.006F, 0.006f, 0);
         shootball.GetComponent<SpriteRenderer>().color = GetComponent<SpriteRenderer>().color;
         shootball.AddForce(Vector2.right * shootForce * f);
         if (c == 1){

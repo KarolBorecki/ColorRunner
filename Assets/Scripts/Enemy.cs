@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour {
     public float speed = 5f;
     public float range = 10;
 
+    public int lifes = 2;
+
     public Transform DeadPrefab;
 
     private float actuallrange;
@@ -35,7 +37,13 @@ public class Enemy : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         changeDirection();
-        if (collision.gameObject.tag == "shoot") Die();
+        if (collision.gameObject.tag == "shoot")
+        {
+            GetComponent<SpriteRenderer>().color = new Color(Random.Range(0.7f, 0.95f), Random.Range(0.7f, 0.95f), Random.Range(0.7f, 0.95f));
+            lifes--;
+        }
+
+        if (lifes <= 0) Die();
            
     }
 

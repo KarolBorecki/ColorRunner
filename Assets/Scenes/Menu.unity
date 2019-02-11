@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 2788691}
   - component: {fileID: 2788690}
   m_Layer: 5
-  m_Name: Caption (1)
+  m_Name: recordText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1777,6 +1777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14182606b3eb1485b9b42cdd8380582a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recordText: {fileID: 2788692}
 --- !u!1001 &612009392
 Prefab:
   m_ObjectHideFlags: 0
