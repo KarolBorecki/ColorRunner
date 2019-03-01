@@ -22,6 +22,7 @@ public class Ball : MonoBehaviour {
     public Text lifesText;
 
     public TestPlayBtn deadBtn;
+
     void Start () {
         rgb = GetComponent<Rigidbody2D>();
         lifesText.text = lifes.ToString();
@@ -33,7 +34,7 @@ public class Ball : MonoBehaviour {
         if(Input.GetButtonDown("Fire1")){
             float f = (GetComponent<BallColors>().actuallColor == 2) ? 1.7f : 1f;
             rgb.velocity = Vector2.up * jumpForce * f;
-            Shoot();
+            if(Time.timeScale > 0f) Shoot();
         }
     }
 

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PlayBtn : MonoBehaviour {
 
     public Text recordText;
+    public fade fade;
 
     private void Start()
     {
@@ -14,6 +15,6 @@ public class PlayBtn : MonoBehaviour {
     }
 
     public void Press(){
-        SceneManager.LoadScene(1);
+        fade.FadeToLevel(1);
     }
 }
