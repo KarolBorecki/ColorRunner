@@ -17,7 +17,7 @@ These instructions will get you a copy of the project up and running on your loc
 3. Click play button
 
 ### Game screenshots
-<img src="https://github.com/KarolBorecki/ColorRunner/blob/master/screenshots/IMG_3333.PNG" width=200px> <img src="https://github.com/KarolBorecki/ColorRunner/blob/master/screenshots/IMG_3334.PNG" width=200px> <img src="https://github.com/KarolBorecki/ColorRunner/blob/master/screenshots/IMG_3335.PNG" width=200px> <img src="https://github.com/KarolBorecki/ColorRunner/blob/master/screenshots/IMG_3336.PNG" width=200px>
+<img src="https://github.com/KarolBorecki/ColorRunner/blob/master/screenshots/Colorrunner20.png" width=200px> <img src="https://github.com/KarolBorecki/ColorRunner/blob/master/screenshots/Colorrunner22.png" width=200px> <img src="https://github.com/KarolBorecki/ColorRunner/blob/master/screenshots/Colorrunner24.png" width=200px> <img src="https://github.com/KarolBorecki/ColorRunner/blob/master/screenshots/Colorrunner31.png" width=200px>
 ## Built With
 
 * [Unity](https://unity3d.com/) - The 2D game engine
