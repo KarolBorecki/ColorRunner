@@ -517,6 +517,7 @@ PlayerSettings:
   switchAllowsVideoCapturing: 1
   switchAllowsRuntimeAddOnContentInstall: 0
   switchDataLossConfirmation: 0
+  switchUserAccountLockEnabled: 0
   switchSupportedNpadStyles: 3
   switchNativeFsCacheSize: 32
   switchIsHoldTypeHorizontal: 0
@@ -744,7 +745,7 @@ PlayerSettings:
   apiCompatibilityLevel: 2
   cloudProjectId: 74d3b2c5-949d-4812-b337-0a623d0f11be
   projectName: SnakeRun
-  organizationId: mrmagio
+  organizationId: karol-borecki
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
